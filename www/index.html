@@ -14,8 +14,12 @@
             var TestClass = ncmb.DataStore("TestClass");
             var testClass = new TestClass();
             var key   = "message";
-            var value = "Hello, NCMB!";
-            testClass.set(key, value);
+            var value1 = "Hello, NCMB!";
+            var value2 = "good morning";
+            var value3 = "good evening";
+            var value4 = "good night";
+           
+            testClass.set(key, value2);
             testClass.save()
                 .then(function() {
                     // 保存完了後に実行される
@@ -55,7 +59,7 @@
     </script>
 </head>
 <body>
-    <h1>NiftyCloud mobile backend!</h1>
+    <h1>OneClick Greetingfunction !</h1>
     <a class="button--large" onclick="startDemo()">Start Demo</a>
     <div>Touch Start Demo to save {"message":"Hello, NCMB!"} to mobile backend.</div>
     <a class="button--large" onclick="fetchDemo()">Fetch Demo</a>
