@@ -9,6 +9,7 @@
     <script src="keys.js"></script>
     <script>
         var ncmb = new NCMB(appKey, clientKey);
+        var count = 0;
 
         function startDemo() {
             var TestClass = ncmb.DataStore("TestClass");
@@ -16,14 +17,6 @@
             var key   = "message";
             var value1 = "Hello";
             var value2 = "Good morning";
-
-            function count(){
-              if(testClass.save()){
-                count++;
-              }else{
-                testClass.save();
-              }
-            } 
            
             
             if(count%2==0){
@@ -68,14 +61,18 @@
               })
             }
 
-            
+            function count(){
+              if(startDemo()=onclick){
+                count++;
+              }
+            }
 
              
     </script>
 </head>
 <body>
     <h1>OneClick Greetingfunction !</h1>
-    <a class="button--large" onclick="startDemo()">Start Demo</a>
+    <a class="button--large" onclick="startDemo()">Start </a>
     <div>Touch Start Demo to save {"message"} to mobile backend.</div>
     <a class="button--large" onclick="fetchDemo()">Fetch Demo</a>
     <div>fetch demo</div>
