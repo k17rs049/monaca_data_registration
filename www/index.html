@@ -19,7 +19,12 @@
             var value3 = "good evening";
             var value4 = "good night";
            
-            testClass.set(key, value2);
+            
+            if(count%2==0){
+              testClass.set(key, value2);
+            }else{
+              testClass.set(key, value1);
+            }
             testClass.save()
                 .then(function() {
                     // 保存完了後に実行される
@@ -56,6 +61,12 @@
                   $("#fetch").html(msg);
               })
             }
+
+            function count(){
+              if(start Demo==onclick){
+                count++;
+              }
+            } 
     </script>
 </head>
 <body>
