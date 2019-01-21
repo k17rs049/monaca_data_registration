@@ -14,16 +14,22 @@
             var TestClass = ncmb.DataStore("TestClass");
             var testClass = new TestClass();
             var key   = "message";
-            var value1 = "Hello, NCMB!";
-            var value2 = "good morning";
-            var value3 = "good evening";
-            var value4 = "good night";
+            var value1 = "Hello";
+            var value2 = "Good morning";
+
+            function count(){
+              if(testClass.save()){
+                count++;
+              }else{
+                testClass.save();
+              }
+            } 
            
             
             if(count%2==0){
-              testClass.set(key, value2);
-            }else{
               testClass.set(key, value1);
+            }else{
+              testClass.set(key, value2);
             }
             testClass.save()
                 .then(function() {
@@ -62,11 +68,9 @@
               })
             }
 
-            function count(){
-              if(start Demo==onclick){
-                count++;
-              }
-            } 
+            
+
+             
     </script>
 </head>
 <body>
